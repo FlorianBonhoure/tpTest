@@ -6,7 +6,10 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import projet3.Calculatrice;
 
 
 class CalculatriceTest {
@@ -34,6 +37,14 @@ class CalculatriceTest {
 	@AfterAll
 	public static void afterAll() {
 		System.out.println("after all");
+	}
+	
+	@Test
+	@DisplayName("test addition correcte")
+	public void testAdd() {
+		Calculatrice calc = new Calculatrice();
+		int result = calc.add(1,2);
+		assertEquals(3,result, "addition correcte");
 	}
 	
 	
