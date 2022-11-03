@@ -68,7 +68,7 @@ class CalculatriceTest {
 	public void testAddZero() {
 		Calculatrice calc = new Calculatrice();
 		int result = calc.add(1, -1);
-		assertEquals(1,result,"le résultat retourné est 1");
+		assertNotEquals(0,result,"le résultat est différent de zéro");
 	}
 	
 	
