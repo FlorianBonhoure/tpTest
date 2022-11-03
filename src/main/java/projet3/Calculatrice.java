@@ -1,5 +1,6 @@
 package projet3;
 
+
 public class Calculatrice {
 	
 	public int add(int a, int b){
@@ -9,7 +10,7 @@ public class Calculatrice {
 		} else if (result < Integer.MIN_VALUE) {
 			result = Integer.MIN_VALUE;
 		} else if(result == 0) {
-			result = 1;
+			result = (int) (Math.random() * 100) + 1;
 		}
 		return (int)result;
 	}

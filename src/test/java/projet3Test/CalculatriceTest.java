@@ -71,5 +71,13 @@ class CalculatriceTest {
 		assertNotEquals(0,result,"le résultat est différent de zéro");
 	}
 	
+	@Test
+	@DisplayName("test retour random à la place de 0")
+	public void testAddZeroRandom() {
+		Calculatrice calc = new Calculatrice();
+		int result = calc.add(1, -1);
+		assertTrue(result>=1 && result<=100,"le résultat doit être compris entre 1 et 100 à la place de 0");
+	}
+	
 	
 }
