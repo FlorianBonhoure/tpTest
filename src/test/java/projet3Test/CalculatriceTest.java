@@ -47,5 +47,29 @@ class CalculatriceTest {
 		assertEquals(3,result, "addition correcte");
 	}
 	
+	@Test
+	@DisplayName("test addition avec max integer")
+	public void testAddMax() {
+		Calculatrice calc = new Calculatrice();
+		int result = calc.add(Integer.MAX_VALUE, 1);
+		assertEquals(Integer.MAX_VALUE,result,"le resultat garde la valeur maximale");
+	}
+	
+	@Test
+	@DisplayName("test addition avec min integer")
+	public void testAddMin() {
+		Calculatrice calc = new Calculatrice();
+		int result = calc.add(Integer.MIN_VALUE, -1);
+		assertEquals(Integer.MIN_VALUE,result,"le resultat garde la valeur minimale");
+	}
+	
+	@Test
+	@DisplayName("test resultat égal à 0")
+	public void testAddZero() {
+		Calculatrice calc = new Calculatrice();
+		int result = calc.add(1, -1);
+		assertEquals(1,result,"le résultat retourné est 1");
+	}
+	
 	
 }
